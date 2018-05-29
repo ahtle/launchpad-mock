@@ -29,7 +29,6 @@ header {
 
 #main-navigation {
     background-color: #8c1515;
-    display: none;
     transition: display .5s ease-in;
 }
 
@@ -83,7 +82,7 @@ header {
 .text-wrap{
     margin: 0;
     position: absolute;
-    top: 15%;
+    top: 30%;
     width: 100%;
 }
   
@@ -114,7 +113,7 @@ svg {
     letter-spacing: .15em; /* Adjust as needed */
     transition: color 0.5s linear;
     animation: 
-      typing 3.5s steps(30, end),
+      typing 2.5s steps(20, end),
       blink-caret .7s step-end infinite;
   }
   
@@ -139,12 +138,6 @@ svg {
      margin-top: 100px;
  }
 
- #pop-up-navigation-container nav ul li a {
-     font-size: 20px;
-     opacity: 0;
-     transition: opacity .3s ease-in;
- }
-
  .opacity-max {
      opacity: 1 !important;
  }
@@ -154,7 +147,9 @@ svg {
  }
 
  /******************** Main ****************/
-main {
+main {}
+
+main.affix {
     position: fixed;
     margin-top: 92px;
     overflow: hidden;
@@ -180,11 +175,11 @@ main {
     color: #000;
 }
 
-.panel.theme--sandstone header {
+.panel.theme--sandstone .section-header {
     text-align: center;
 }
 
-header h2 {
+.section-header h2 {
     font-size: 3em;
 }
 
@@ -224,4 +219,9 @@ header h2 {
     color: #8c1515;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+/***************** utility **************/
+.no-display {
+    display: none !important;
 }

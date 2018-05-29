@@ -24,13 +24,29 @@ function initialAnimation() {
         $('.animation-container .overlay').addClass('opacity-min');
         $('.img-layer').css({ fill: "#fff" });
         $('.typewriter h1').addClass('dark-orange');
-    }, 3500);
+    }, 2500);
 
 
     // fade-in navigation
-    setTimeout(function() {
-        $('#pop-up-navigation-container nav ul li').each(function() {
-            $(this).find('a').addClass('opacity-max');
-        });
-    }, 4000);
+    // setTimeout(function() {
+    //     $('#pop-up-navigation-container nav ul li').each(function() {
+    //         $(this).find('a').addClass('opacity-max');
+    //     });
+    // }, 4000);
 }
+
+$('.nav-link').click(function() {
+    $('main').removeClass("affix");
+});
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 915) {
+        $('main').removeClass("affix");
+        $('#main-spacer').addClass('no-display');
+    } else {
+        $('main').addClass("affix");
+        $('#main-spacer').removeClass('no-display');
+    }
+});
