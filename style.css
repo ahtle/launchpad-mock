@@ -113,8 +113,8 @@ svg {
     letter-spacing: .15em; /* Adjust as needed */
     transition: color 0.5s linear;
     animation: 
-      typing 2.5s steps(20, end),
-      blink-caret .7s step-end infinite;
+      typing 2s steps(27, end),
+      blink-caret .6s step-end infinite;
   }
   
   /* The typing effect */
@@ -214,6 +214,25 @@ main.affix {
     background-position-x: 90%;
 }
 
+/* Faculty Affairs */
+
+/* communications */
+#communications-bg {
+    background-image: url('https://www-media.stanford.edu/wp-content/uploads/2018/06/11120358/ht_powermind_Getty.jpg');
+    background-size: cover;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+}
+
+.communications-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+}
+
 /* color */
 .app-header {
     color: #8c1515;
@@ -224,4 +243,8 @@ main.affix {
 /***************** utility **************/
 .no-display {
     display: none !important;
+}
+
+.center-text {
+    text-align: center;
 }
