@@ -248,3 +248,136 @@ main.affix {
 .center-text {
     text-align: center;
 }
+
+
+
+
+
+/*********************** v2 *********************/
+#v2 {
+    height: 1000px;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(41, 46, 48);
+    background-size: cover;
+    top: 60px;
+}
+
+.slide-panel {
+    display: inline-block;
+    height: 100%;
+    width: calc(100% / 7);
+    float: left;
+    background-size: cover !important;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+.pre-expand{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.pre-expand p {
+    color: #fff;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.pre-expand p span {
+    color: orange;
+    font-size: 1.2em;
+}
+
+.pre-expand h1 {
+    position: absolute;
+    top: 0;
+    font-size: 6em;
+    color: orange;
+}
+
+#panel-1 {
+    background: url('images/campus-big-01.jpg') no-repeat center center;
+}
+
+#panel-2 {
+    background: url('images/campus-big-02.jpg') no-repeat center center;
+}
+
+#panel-3 {
+    background: url('images/campus-big-03.jpg') no-repeat center center;
+}
+
+#panel-4 {
+    background: url('images/campus-big-04.jpg') no-repeat center center;
+}
+
+#panel-5 {
+    background: url('images/campus-big-01.jpg') no-repeat center center;
+}
+
+#panel-6 {
+    background: url('images/campus-big-02.jpg') no-repeat center center;
+}
+
+#panel-7 {
+    background: url('images/campus-big-03.jpg') no-repeat center center;
+}
+
+.post-expand {
+    opacity: 0;
+    /* background: rgba(0, 0, 0, 0.3); */
+    height: 100%;
+    transition: all 1s linear;
+    display: flex;
+    align-items: center;
+}
+
+.post-expand .text-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.post-expand h1 {
+    color: orange;
+    font-size: 4em;
+}
+
+.post-expand p {
+    color: #fff;
+    font-size: 2em;
+    width: 60%;
+}
+
+.arrow-down {
+    position: absolute;
+    bottom: 140px;
+    left: 50%;
+    border: solid #fff;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 0 20px 40px;
+    transform: rotate(45deg);
+}
+
+/* animation */
+.full-width {
+    width: 100%;
+}
+
+.no-width {
+    width: 0%;
+}
+
+.opacity {
+    opacity: 1;
+}
+
+.no-display {
+    display: none;
+}
