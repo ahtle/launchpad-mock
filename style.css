@@ -20,7 +20,8 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 2000;
+    z-index: 3000;
+    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
 }
 
 #dom-logo {
@@ -30,6 +31,11 @@ header {
 #main-navigation {
     background-color: #8c1515;
     transition: display .5s ease-in;
+    position: fixed;
+    top: 60px;
+    z-index: 3000;
+    width: 100%;
+    transition: background-color 0.5s ease;
 }
 
 .navbar {
@@ -62,175 +68,25 @@ header {
     background-color: #8c1515;
 }
 
-/*************** animation *************/
-.animation-container {
-    margin-top: 60px;
-    height: 940px;
-    position: relative;
-    background-image: url('https://www-media.stanford.edu/wp-content/uploads/2018/05/01105844/admit-weekend-splash-land.jpg');
-    background-size: cover;
-    z-index: 1000;
-}
-
-.overlay {
-    width: 100%;
-    height: 100%;
-    background: rgba(255,255,255,1);
-    transition: background 1s ease-in;
-}
-
-.text-wrap{
-    margin: 0;
+.affix-nav {
+    z-index: 2000;
     position: absolute;
-    top: 30%;
-    width: 100%;
-}
-  
-svg {
-    font: bold 80px sans-serif;
-    text-transform: uppercase;
-}
-    
-.img-layer {
-    fill: url(#p-img);
-    transition: fill 1s linear;
-}
-
-/* typewriter animation */
-.typewriter-container {
-    display: flex;
-    justify-content: center;
-}
-
-.typewriter h1 {
-    color: #8c1515;
-    font-family: monospace;
-    font-size: 30px;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    transition: color 0.5s linear;
-    animation: 
-      typing 2s steps(27, end),
-      blink-caret .6s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
-  }
-
-.dark-orange {
-    color: #f5a748 !important;
-}
-
- /* pop-up navigation container */
- #pop-up-navigation-container {
-     margin-top: 100px;
- }
-
- .opacity-max {
-     opacity: 1 !important;
- }
-
- .opacity-min {
-    background: rgba(0,0,0,0.35);
- }
-
- /******************** Main ****************/
-main {}
-
-main.affix {
-    position: fixed;
-    margin-top: 92px;
-    overflow: hidden;
-    top: 0;
-    z-index: 1;
-}
-
-#main-spacer {
-    visibility: hidden;
-    height: 10678px;
-    z-index: -100;
-    display: block;
-}
-
- /* Finance */
- .panel {
-    padding-top: 37.5px;
-    padding-bottom: 37.5px;
-}
-
-.panel.theme--sandstone {
-    background-color: #f9f6ef;
-    color: #000;
-}
-
-.panel.theme--sandstone .section-header {
-    text-align: center;
-}
-
-.section-header h2 {
-    font-size: 3em;
-}
-
-#finance .flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    top: 70px;
+    right: 5%;
+    height: 52px;
+    width: 52px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
-#finance .flex-container > div {
-    width: 30%;
-    text-align: center;
-    margin: 10px;
-    padding: 0 10px;
-}
-
-.app-detail {
-    height: 120px;
-}
-
-#finance .flex-container div img {
-    width: 100%;
-}
-
-/* HR */
-#hr {
-    height: 400px;
-    background-image: url('./images/hr.png');
-    background-size: 40%;
-    background-repeat: no-repeat;
-    background-position-x: 90%;
-}
-
-/* Faculty Affairs */
-
-/* communications */
-#communications-bg {
-    background-image: url('https://www-media.stanford.edu/wp-content/uploads/2018/06/11120358/ht_powermind_Getty.jpg');
-    background-size: cover;
-    width: 80%;
-    margin: 0 auto;
-    padding: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
-}
-
-.communications-card {
-    background-color: #fff;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+.affix-nav span {
+    color: #fff;
+    font-size: 22px;
 }
 
 /* color */
@@ -247,4 +103,216 @@ main.affix {
 
 .center-text {
     text-align: center;
+}
+
+
+/*********************** v2 *********************/
+main.affix {
+    position: fixed;
+    margin-top: 60px;
+    overflow: hidden;
+    top: 0;
+    z-index: 1;
+}
+
+#main-spacer {
+    height: 2000px;
+}
+
+#v2 {
+    margin-top: 60px;
+    z-index: 1000;
+    height: 95vh;
+    width: 100%;
+    position: relative;
+    background-color: rgb(41, 46, 48);
+    background-size: cover;
+}
+
+.slide-panel {
+    display: inline-block;
+    height: 100%;
+    width: calc(100% / 7);
+    float: left;
+    background-size: cover !important;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+.pre-expand{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.pre-expand p {
+    color: #fff;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.pre-expand p span {
+    color: orange;
+    font-size: 1.2em;
+}
+
+.pre-expand h1 {
+    position: absolute;
+    top: 0;
+    font-size: 6em;
+    color: orange;
+}
+
+#panel-1 {
+    background: url('images/campus-big-01.jpg') no-repeat center center;
+}
+
+#panel-2 {
+    background: url('images/campus-big-02.jpg') no-repeat center center;
+}
+
+#panel-3 {
+    background: url('images/campus-big-03.jpg') no-repeat center center;
+}
+
+#panel-4 {
+    background: url('images/campus-big-04.jpg') no-repeat center center;
+}
+
+#panel-5 {
+    background: url('images/campus-big-01.jpg') no-repeat center center;
+}
+
+#panel-6 {
+    background: url('images/campus-big-02.jpg') no-repeat center center;
+}
+
+#panel-7 {
+    background: url('images/campus-big-03.jpg') no-repeat center center;
+}
+
+.post-expand {
+    opacity: 0;
+    /* background: rgba(0, 0, 0, 0.3); */
+    height: 100%;
+    transition: all 1s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-expand .text-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.post-expand h1 {
+    color: orange;
+    font-size: 4em;
+}
+
+.post-expand p {
+    color: #fff;
+    font-size: 2em;
+    width: 60%;
+}
+
+.arrow-down {
+    position: absolute;
+    bottom: 140px;
+    left: 50%;
+    border: solid #fff;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 0 20px 40px;
+    transform: rotate(45deg);
+}
+
+/* main detail */
+.panel {
+    padding: 90px 60px 60px 60px;
+}
+
+.panel.sand {
+    background-color: #f9f6ef;
+}
+
+.panel.choco {
+    background-color: #2f2424;
+}
+
+.section-header {
+    color: #b1040e;
+    font-size: 3em;
+    text-align: center;
+}
+
+.section-subheader {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* finance */
+.flex-container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: 'row';
+    justify-content: space-between;
+}
+
+.app-card {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, .2);
+}
+
+img {
+    width: 100%;
+}
+
+/* hr */
+#hr {
+    background-image: url('images/hr.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 30%;
+}
+
+.hr-app-card {
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, .2);
+}
+
+/* faculty */
+.hr.app-card {
+    width: 100%;
+    padding: 5px 10px;
+}
+
+/* animation */
+.full-width {
+    width: 100%;
+}
+
+.no-width {
+    width: 0%;
+}
+
+.opacity {
+    opacity: 1;
+}
+
+.transparent-bg {
+    background-color: transparent !important;
 }
