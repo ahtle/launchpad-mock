@@ -97,14 +97,6 @@ header {
     font-weight: 600;
 }
 
-/***************** utility **************/
-.no-display {
-    display: none !important;
-}
-
-.center-text {
-    text-align: center;
-}
 
 
 /*********************** v2 *********************/
@@ -131,13 +123,18 @@ main.affix {
 }
 
 .slide-panel {
+    position: relative;
     display: inline-block;
     height: 100%;
-    width: calc(100% / 7);
+    width: calc(100% / 7 - (6px) );
     float: left;
-    background-size: cover !important;
+    margin-left: 3px;
+    margin-right: 3px;
+    /* background-size: cover !important;*/
     opacity: 0;
     transition: all 0.5s linear;
+    background: url('images/campus-big-02.jpg') no-repeat scroll;
+    /* background-size: cover; */
 }
 
 .pre-expand{
@@ -167,32 +164,78 @@ main.affix {
     color: orange;
 }
 
+.top-blank, .bottom-blank {
+    background-color: rgb(41, 46, 48);
+    width: 100%;
+    position: absolute;
+}
+
+.top-blank {
+    top: 0;
+}
+
+.bottom-blank {
+    bottom: 0;
+}
+
 #panel-1 {
-    background: url('images/campus-big-01.jpg') no-repeat center center;
+    /* background: url('images/campus-big-01.jpg') no-repeat center center; */
+    /* height: calc(100% - 200px);
+    margin-top: 100px */
+}
+
+#panel-1 .pre-expand .top-blank {
+    height: 375px;
 }
 
 #panel-2 {
-    background: url('images/campus-big-02.jpg') no-repeat center center;
+    /* background: url('images/campus-big-02.jpg') no-repeat center center; */
+    background-position-x: calc(-100vw * 1 / 7);
+}
+
+#panel-2 .pre-expand .top-blank {
+    height: 250px;
 }
 
 #panel-3 {
-    background: url('images/campus-big-03.jpg') no-repeat center center;
+    /* background: url('images/campus-big-03.jpg') no-repeat center center; */
+    background-position-x: calc(-100vw * 2 / 7);
+}
+
+#panel-3 .pre-expand .top-blank {
+    height: 125px;
 }
 
 #panel-4 {
-    background: url('images/campus-big-04.jpg') no-repeat center center;
+    /* background: url('images/campus-big-04.jpg') no-repeat center center; */
+    background-position-x: calc(-100vw * 3 / 7);
 }
 
 #panel-5 {
-    background: url('images/campus-big-01.jpg') no-repeat center center;
+    /* background: url('images/campus-big-01.jpg') no-repeat center center; */
+    background-position-x: calc(-100vw * 4 / 7);
+}
+
+#panel-5 .pre-expand .bottom-blank {
+    height: 125px;
 }
 
 #panel-6 {
-    background: url('images/campus-big-02.jpg') no-repeat center center;
+    /* background: url('images/campus-big-02.jpg') no-repeat center center; */
+    background-position-x: calc(-100vw * 5 / 7);
+}
+
+#panel-6 .pre-expand .bottom-blank {
+    height: 250px;
 }
 
 #panel-7 {
-    background: url('images/campus-big-03.jpg') no-repeat center center;
+    /* background: url('images/campus-big-03.jpg') no-repeat center center; */
+    background-position-x: calc(-100vw * 6 / 7);
+}
+
+#panel-7 .pre-expand .bottom-blank {
+    height: 375px;
 }
 
 .post-expand {
@@ -296,6 +339,16 @@ img {
 }
 
 /* faculty */
+
+/***************** utility **************/
+.no-display {
+    display: none !important;
+}
+
+.center-text {
+    text-align: center;
+}
+
 .hr.app-card {
     width: 100%;
     padding: 5px 10px;
