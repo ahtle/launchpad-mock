@@ -70,6 +70,7 @@ $(document).ready(function() {
     }, 900);
 });
 
+// expand panel
 $('.slide-panel').click(function() {
     const el = $(this);
 
@@ -82,6 +83,9 @@ $('.slide-panel').click(function() {
         el.children('.post-expand').removeClass('no-display');
         el.children('.post-expand').addClass('opacity');
     }, 400);
+
+    $('main').removeClass("affix");
+    $('#main-spacer').addClass('no-display');
 });
 
 $('.affix-nav').click(function() {
