@@ -14,10 +14,6 @@ body {
 }
 
 /************ header ************/
-header {
-
-}
-
 #dom-logo {
     height: 60px;
 }
@@ -208,9 +204,15 @@ header {
 
 /* main detail */
 .panel {
-    background-color: #f9f6ef;
     padding: 90px 60px 60px 60px;
-    height: 100vh;
+}
+
+.panel.sand {
+    background-color: #f9f6ef;
+}
+
+.panel.choco {
+    background-color: #2f2424;
 }
 
 .section-header {
@@ -233,7 +235,6 @@ header {
 }
 
 .app-card {
-    width: 30%;
     padding: 20px;
     background-color: #fff;
     border: 1px solid lightgray;
@@ -250,7 +251,7 @@ img {
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;
-    background-size: 40%;
+    background-size: 30%;
 }
 
 .hr-app-card {
@@ -260,6 +261,12 @@ img {
     background-color: #fff;
     border: 1px solid lightgray;
     box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, .2);
+}
+
+/* faculty */
+.hr.app-card {
+    width: 100%;
+    padding: 5px 10px;
 }
 
 /* animation */
