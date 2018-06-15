@@ -32,17 +32,21 @@
 //     $('main').removeClass("affix");
 // });
 
-// $(window).scroll(function() {    
-//     var scroll = $(window).scrollTop();
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
 
-//     if (scroll >= 1000) {
-//         $('main').removeClass("affix");
-//         $('#main-spacer').addClass('no-display');
-//     } else {
-//         $('main').addClass("affix");
-//         $('#main-spacer').removeClass('no-display');
-//     }
-// });
+    if (scroll >= 1000) {
+        $('main').removeClass("affix");
+        $('#main-spacer').addClass('no-display');
+        $('#main-navigation').removeClass("transparent-bg");
+        $('#main-navigation .container').removeClass("no-display");
+    } else {
+        $('main').addClass("affix");
+        $('#main-spacer').removeClass('no-display');
+        $('#main-navigation').addClass("transparent-bg");
+        $('#main-navigation .container').addClass("no-display");
+    }
+});
 
 $(document).ready(function() {
     $('#panel-1').addClass('opacity');
@@ -78,26 +82,14 @@ $('.slide-panel').click(function() {
         el.children('.post-expand').removeClass('no-display');
         el.children('.post-expand').addClass('opacity');
     }, 400);
-    
-    // let selected = el.attr('value');
-    // $(`#${selected}`).removeClass('no-display');
-    $('main').removeClass('no-display');
 });
 
 $('.affix-nav').click(function() {
-    $("html, body").animate({ scrollTop: 0 }, "slow");
     $(this).removeClass('opacity');
     
-    setTimeout(function() {
-        $('main').addClass('no-display');
-        $('.full-width').siblings().removeClass('no-width');
-        $('.full-width').removeClass('full-width');
-        $('.pre-expand').removeClass('no-display');
-        $('.post-expand').removeClass('opacity');
-        $('.post-expand').addClass('no-display');
-    }, 500);
-
-    // if (document.body.scrollTop === 0) {
-    // }
-
+    $('.full-width').siblings().removeClass('no-width');
+    $('.full-width').removeClass('full-width');
+    $('.pre-expand').removeClass('no-display');
+    $('.post-expand').removeClass('opacity');
+    $('.post-expand').addClass('no-display');
 });

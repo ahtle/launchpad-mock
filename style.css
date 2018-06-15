@@ -14,6 +14,16 @@ body {
 }
 
 /************ header ************/
+header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3000;
+    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+}
+
 #dom-logo {
     height: 60px;
 }
@@ -21,6 +31,11 @@ body {
 #main-navigation {
     background-color: #8c1515;
     transition: display .5s ease-in;
+    position: fixed;
+    top: 60px;
+    z-index: 3000;
+    width: 100%;
+    transition: background-color 0.5s ease;
 }
 
 .navbar {
@@ -54,11 +69,11 @@ body {
 }
 
 .affix-nav {
-    position: fixed;
+    z-index: 2000;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 4;
     top: 70px;
     right: 5%;
     height: 52px;
@@ -92,7 +107,21 @@ body {
 
 
 /*********************** v2 *********************/
+main.affix {
+    position: fixed;
+    margin-top: 60px;
+    overflow: hidden;
+    top: 0;
+    z-index: 1;
+}
+
+#main-spacer {
+    height: 2000px;
+}
+
 #v2 {
+    margin-top: 60px;
+    z-index: 1000;
     height: 95vh;
     width: 100%;
     position: relative;
@@ -116,6 +145,7 @@ body {
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .pre-expand p {
@@ -171,6 +201,7 @@ body {
     transition: all 1s linear;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .post-expand .text-container {
@@ -280,4 +311,8 @@ img {
 
 .opacity {
     opacity: 1;
+}
+
+.transparent-bg {
+    background-color: transparent !important;
 }
